@@ -4,7 +4,6 @@ const initialState = {
   friendName: "",
   friendList: [],
   searchTerm: "",
-  favFriends: [],
   errorMessage: "",
   currentPage: 1,
   friendsPerPage: 4

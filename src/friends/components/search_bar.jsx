@@ -26,7 +26,7 @@ const SearchBar = props => {
         placeholder="search"
         className="search-box"
       />
-      <span class="material-icons search" onClick={handleSearch}>
+      <span className="material-icons search" onClick={handleSearch}>
         search
       </span>
     </div>

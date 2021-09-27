@@ -4,7 +4,7 @@ const SortByFavourite = props => {
   const { sortByFavourite } = props;
   return (
     <div className="sort-by-fav" onClick={sortByFavourite}>
-      <span class="material-icons outlined sort">sort</span>
+      <span className="material-icons outlined sort">sort</span>
     </div>
   );
 };

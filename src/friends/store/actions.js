@@ -12,18 +12,24 @@ export function handlePaginationClick(page) {
 export function addFriendToList(friendToAdd) {
   return (dispatch, getState) => {
     let friendList = getState().friendList;
-
-    if (friendList.indexOf(friendToAdd) === -1) {
+    const found = friendList.some(friend => friend.name === friendToAdd);
+    if (!found) {
       friendList.push({
         name: friendToAdd,
         is_favourite: false,
         id: friendList.length
       });
+      dispatch({
+        type: Types.ADD_FRIEND_TO_LIST,
+        payload: friendList
+      });
+    } else {
+      dispatch(
+        setErrorMessage(
+          `${friendToAdd} is already in your friend list :), try adding new friend :D`
+        )
+      );
     }
-    dispatch({
-      type: Types.ADD_FRIEND_TO_LIST,
-      payload: friendList
-    });
   };
 }
 export function setSearchTerm(data) {
