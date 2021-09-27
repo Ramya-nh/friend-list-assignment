@@ -1,1 +1,1 @@
-# friend-list-assignment
+# This app will allow you to add friend into friend list, you can perform follow these actions, add unique named friends, delete friend, make a friend as favourite, unfavourite and you can sort friends as favourites on top.
